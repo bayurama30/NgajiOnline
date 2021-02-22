@@ -1,25 +1,52 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import {
+  BarHomeScreen,
+  BarWaktu,
+  BarKalender,
+  BarKompas,
+  BarAkun,
+} from '../../images';
 
 const MenuBar = () => {
   return (
     <View
       style={{
         backgroundColor: '#55B859',
-        width: 319.98,
+        width: 340,
         height: 70,
         borderRadius: 15,
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 20,
+        padding: 15,
         marginTop: 56,
       }}>
       <View style={styles.MenuWrapper}>
-        <View style={styles.MenuItem} />
-        <View style={styles.MenuItem} />
-        <View style={styles.MenuItem} />
-        <View style={styles.MenuItem} />
-        <View style={styles.MenuItem} />
+        <TouchableOpacity>
+          <View style={styles.MenuItem}>
+            <Image source={BarHomeScreen} style={styles.iconBar} />
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <View style={styles.MenuItem}>
+            <Image source={BarWaktu} style={styles.iconBar} />
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <View style={styles.MenuItem}>
+            <Image source={BarKalender} style={styles.iconBar} />
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <View style={styles.MenuItem}>
+            <Image source={BarKompas} style={styles.iconBar} />
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <View style={styles.MenuItem}>
+            <Image source={BarAkun} style={styles.iconBar} />
+          </View>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -33,10 +60,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignSelf: 'stretch',
+    marginHorizontal: 10,
+    alignItems: 'center',
   },
-  MenuItem: {
-    width: 31.55,
-    height: 30.39,
-    backgroundColor: 'powderblue',
+
+  iconBar: {
+    width: 35,
+    height: 35,
   },
 });

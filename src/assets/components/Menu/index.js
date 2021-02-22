@@ -1,20 +1,76 @@
 import React from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {AlQuran, ArahKiblat, JadwalSolat} from '../../images';
+import {
+  AlQuran,
+  ArahKiblat,
+  JadwalSolat,
+  Kalender,
+  Dzikir,
+  AsmaulHusna,
+  Shalawat,
+  Ngaji,
+  Masjid,
+} from '../../images';
 
-const Item = (props) => {
+const Item = () => {
   return (
     <View style={styles.MenuWrapper}>
       <TouchableOpacity>
         <View style={styles.MenuItem}>
-          <Image source={props.icon} style={styles.icon} />
+          <Image source={AlQuran} style={styles.icon} />
         </View>
       </TouchableOpacity>
       <TouchableOpacity>
-        <View style={styles.MenuItem} />
+        <View style={styles.MenuItem}>
+          <Image source={ArahKiblat} style={styles.icon} />
+        </View>
       </TouchableOpacity>
       <TouchableOpacity>
-        <View style={styles.MenuItem} />
+        <View style={styles.MenuItem}>
+          <Image source={JadwalSolat} style={styles.icon} />
+        </View>
+      </TouchableOpacity>
+    </View>
+  );
+};
+const Item1 = () => {
+  return (
+    <View style={styles.MenuWrapper}>
+      <TouchableOpacity>
+        <View style={styles.MenuItem}>
+          <Image source={Kalender} style={styles.icon} />
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity>
+        <View style={styles.MenuItem}>
+          <Image source={Dzikir} style={styles.icon} />
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity>
+        <View style={styles.MenuItem}>
+          <Image source={AsmaulHusna} style={styles.icon} />
+        </View>
+      </TouchableOpacity>
+    </View>
+  );
+};
+const Item2 = () => {
+  return (
+    <View style={styles.MenuWrapper}>
+      <TouchableOpacity>
+        <View style={styles.MenuItem}>
+          <Image source={Shalawat} style={styles.icon} />
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity>
+        <View style={styles.MenuItem}>
+          <Image source={Ngaji} style={styles.icon} />
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity>
+        <View style={styles.MenuItem}>
+          <Image source={Masjid} style={styles.icon} />
+        </View>
       </TouchableOpacity>
     </View>
   );
@@ -23,9 +79,9 @@ const Item = (props) => {
 const Menu = () => {
   return (
     <View style={styles.container}>
-      <Item icon={AlQuran} />
-      <Item icon={ArahKiblat} />
-      <Item icon={JadwalSolat} />
+      <Item />
+      <Item1 />
+      <Item2 />
     </View>
   );
 };

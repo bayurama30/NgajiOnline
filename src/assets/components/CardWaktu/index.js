@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     backgroundColor: '#55B859',
-    width: 319.98,
+    width: 340,
     height: 120.07,
     marginTop: 18.7,
     borderRadius: 20,
