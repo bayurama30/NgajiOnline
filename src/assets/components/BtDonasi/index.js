@@ -1,11 +1,13 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
 const BtDonasi = () => {
   return (
-    <View style={styles.wrapper}>
-      <Text style={styles.teks}>Donasi</Text>
-    </View>
+    <TouchableOpacity>
+      <View style={styles.wrapper}>
+        <Text style={styles.teks}>Donasi</Text>
+      </View>
+    </TouchableOpacity>
   );
 };
 
@@ -15,7 +17,7 @@ const styles = StyleSheet.create({
   wrapper: {
     width: 74,
     height: 25,
-    backgroundColor: 'green',
+    backgroundColor: '#124B30',
     padding: 2,
     alignItems: 'center',
     borderRadius: 10,

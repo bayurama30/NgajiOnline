@@ -8,7 +8,7 @@ import {
   BarAkun,
 } from '../../images';
 
-const MenuBar = () => {
+const MenuBar = (props) => {
   return (
     <View
       style={{
@@ -22,28 +22,28 @@ const MenuBar = () => {
         marginTop: 56,
       }}>
       <View style={styles.MenuWrapper}>
-        <TouchableOpacity>
-          <View style={styles.MenuItem}>
+        <TouchableOpacity onPress={props.onButtonPress}>
+          <View>
             <Image source={BarHomeScreen} style={styles.iconBar} />
           </View>
         </TouchableOpacity>
-        <TouchableOpacity>
-          <View style={styles.MenuItem}>
+        <TouchableOpacity onPress={props.onButtonPress}>
+          <View>
             <Image source={BarWaktu} style={styles.iconBar} />
           </View>
         </TouchableOpacity>
         <TouchableOpacity>
-          <View style={styles.MenuItem}>
+          <View>
             <Image source={BarKalender} style={styles.iconBar} />
           </View>
         </TouchableOpacity>
         <TouchableOpacity>
-          <View style={styles.MenuItem}>
+          <View>
             <Image source={BarKompas} style={styles.iconBar} />
           </View>
         </TouchableOpacity>
         <TouchableOpacity>
-          <View style={styles.MenuItem}>
+          <View>
             <Image source={BarAkun} style={styles.iconBar} />
           </View>
         </TouchableOpacity>

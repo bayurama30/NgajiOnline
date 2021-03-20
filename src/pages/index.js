@@ -1,3 +1,5 @@
 import Home from './Home';
+import JadwalSholat from './JadwalShallat';
+import Kalender from './Kalender';
 
-export {Home};
+export {Home, JadwalSholat, Kalender};

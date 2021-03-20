@@ -1,18 +1,28 @@
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
-import {Home, Login, Register, Welcome} from '../pages';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {Home, JadwalSholat, Kalender} from '../pages';
 
-const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
 const Router = () => {
   return (
-    <Stack.Navigator>
-      <Stack.Screen
+    <Tab.Navigator initialRouteName={Home}>
+      <Tab.Screen
         name="Home"
         component={Home}
-        options={{headerShown: false}}
+        options={{tabBarVisible: false}}
       />
-    </Stack.Navigator>
+      <Tab.Screen
+        name="Jadwal Shallat"
+        component={JadwalSholat}
+        options={{tabBarVisible: false}}
+      />
+      <Tab.Screen
+        name="Kalender"
+        component={Kalender}
+        options={{tabBarVisible: false}}
+      />
+    </Tab.Navigator>
   );
 };
 

@@ -13,6 +13,7 @@ import BarWaktu from './homescreen/bar-waktu.png';
 import BarKalender from './homescreen/bar-kalender.png';
 import BarKompas from './homescreen/bar-kompas.png';
 import BarAkun from './homescreen/bar-akun.png';
+import IconLokasi from './homescreen/icon-lokasi.png';
 
 export {
   AlQuran,
@@ -29,4 +30,5 @@ export {
   BarKalender,
   BarKompas,
   BarAkun,
+  IconLokasi,
 };
